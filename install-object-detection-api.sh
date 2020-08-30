@@ -5,6 +5,9 @@ cd models/research
 protoc object_detection/protos/*.proto --python_out=.
 export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow/models/research:/home/pi/tensorflow/models/research/slim
 
+# Return to our Directory 
+ cd ../..
+ 
 # Echo Success Message
 
 echo TensorFlow Object Detection API Setup Successfully!
