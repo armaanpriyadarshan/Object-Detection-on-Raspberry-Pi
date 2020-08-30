@@ -24,6 +24,6 @@ gdown https://drive.google.com/uc?id=11mujzVaFqa7R1_lB7q0kVPW22Ol51MPg
 
 # Install the Downloaded Wheel
 
-sudo -H pip3 install tensorflow-2.2.0-cp37-cp37m-linux_armv7l.whl
+pip install tensorflow-2.2.0-cp37-cp37m-linux_armv7l.whl
 
 echo Prequisites Downloaded Successfully
