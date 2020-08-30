@@ -31,4 +31,6 @@ pip install tensorflow-2.2.0-cp37-cp37m-linux_armv7l.whl
 pip install matplotlib
 sudo apt-get install protobuf-compiler
 
+# Print Success Message
+
 echo Prequisites Downloaded Successfully
