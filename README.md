@@ -1,6 +1,9 @@
 # Object-Detection-on-Raspberry-Pi
 
-### This Tutorial Covers How to deploy the new TensorFlow 2 Object Detection Models as well Custom Object Detection Models on the Raspberry Pi
+### This Tutorial Covers How to deploy the New TensorFlow 2 Object Detection Models and Custom Object Detection Models on the Raspberry Pi
+<p align="center">
+  <img src="doc/Thumbnail.png">
+</p>
 
 ***Note: TensorFlow Lite is much more popular on smaller devices such as the Raspberry Pi, but with the recent release of the TensorFlow 2 Custom Object Detection API and TensorFlow saved_model format, TensorFlow Lite has become quite error-prone with these newer models. Upon testing, converted tflite models weren't very stable nor compatible with the tflite_runtime module. However, this is sure to change with time to come! So be sure to stay tuned and alert for new guides coming soon!***
 
@@ -15,3 +18,6 @@ Continuing with my tutorial on the TensorFlow 2 Object Detection API, what bette
 2. [Organizing our Workspace and Virtual Environment]()
 3. [Installing TensorFlow, OpenCV, and other Prerequisites]()
 4. [Testing out our Model ]()
+
+## Step 1: Setting up the Raspberry Pi and Getting Updates
+Before we can get started, we must have access to the Raspberry Pi's Desktop Interface. This can be done with VNC Viewer or the standard Monitor and HDMI. I made a more detailed video which can be found below
