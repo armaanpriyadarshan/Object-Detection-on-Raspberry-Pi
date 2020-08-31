@@ -23,3 +23,21 @@ Continuing with my tutorial on the TensorFlow 2 Object Detection API, what bette
 Before we can get started, we must have access to the Raspberry Pi's Desktop Interface. This can be done with VNC Viewer or the standard Monitor and HDMI. I made a more detailed video which can be found below
 
 [![Link to my vid](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/doc/Raspi%20vid.png)](https://www.youtube.com/watch?v=jVzMRlCNO3U)
+
+Once you have access to the Desktop Interface, either remote or physical, open up a terminal. Retrieve updates for the Raspberry Pi with
+
+```
+sudo apt-get update
+sudo apt-get dist-upgrade
+```
+
+Depending on how recently you setup or updated your Pi, this can be instantaneous or lengthy. After your Raspberry Pi is up-to-date, we should make sure our Camera is enabled. First to open up the System Interface, use
+
+```
+sudo raspi-config
+```
+
+Then navigate to Interfacing Options -> Camera and make sure it is enabled. Then hit Finish and reboot if necessary.
+<p align="center">
+  <img src="doc/Camera Interface.png">
+</p>
