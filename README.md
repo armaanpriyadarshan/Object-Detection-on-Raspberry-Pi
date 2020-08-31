@@ -39,7 +39,7 @@ sudo raspi-config
 
 Then navigate to Interfacing Options -> Camera and make sure it is enabled. Then hit Finish and reboot if necessary.
 
-<p align="center">
+<p align="left">
   <img src="doc/Camera Interface.png">
 </p>
 
@@ -48,5 +48,43 @@ Then navigate to Interfacing Options -> Camera and make sure it is enabled. Then
 Then, your going to want to clone this repository with
 
 ```
+git clone https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi.git
+```
+
+This name is a bit long so let's trim it down with
 
 ```
+mv Object-Detection-on-Raspberry-Pi tensorflow
+```
+
+We are now going to create a Virtual Environment to avoid version conflicts with previously installed packages on the Raspberry Pi. First, let's install virtual env with
+
+```
+sudo pip3 install virtualenv
+```
+
+Now, we can create our ```tensorflow``` virtual environment with
+
+```
+python3 -m venv tensorflow
+```
+
+There should now be a ```bin``` folder inside of our ```tensorflow``` directory. So let's change directories with
+
+```
+cd tensorflow
+```
+
+We can then activate our Virtual Envvironment with
+
+```
+source bin/activate
+```
+
+**Note: Now that we have a virtual environment, everytime you start a new terminal, you will no longer be in the virtual environment. You can reactivate it manually or issue ```echo "source tensorflow/bin/activate" >> ~/.bashrc```. This basically activates our Virtual Environment as soon as we open a new terminal. You can tell if the Virtual Environment is active by the name showing up in parenthesis next to the working directory.**
+
+When you issue ```ls```, your ```tensorflow``` directory should now look something like this
+
+<p align="center">
+  <img src="doc/directory.png">
+</p>
