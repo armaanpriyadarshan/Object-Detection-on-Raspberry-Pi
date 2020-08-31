@@ -38,6 +38,15 @@ sudo raspi-config
 ```
 
 Then navigate to Interfacing Options -> Camera and make sure it is enabled. Then hit Finish and reboot if necessary.
+
 <p align="center">
   <img src="doc/Camera Interface.png">
 </p>
+
+## Step 2: Organizing our Workspace and Virtual Environment
+
+Then, your going to want to clone this repository with
+
+```
+
+```
