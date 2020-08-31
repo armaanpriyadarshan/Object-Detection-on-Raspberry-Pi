@@ -88,3 +88,38 @@ When you issue ```ls```, your ```tensorflow``` directory should now look somethi
 <p align="center">
   <img src="doc/directory.png">
 </p>
+
+## Step 3: Installing TensorFlow, OpenCV, and other Prerequisites
+To make this step as user-friendly as possible, I condensed the installation process into 2 shell scripts. 
+
+- ```get-prerequisites.sh```: This script installs OpenCV, TensorFlow 2.2.0, and matplotlib along with the dependencies for each module
+- ```install-object-detection-api.sh```: This script clones the tensorflow/models repo, compiles the protos, and installs the Object Detection API through an Environment Variable
+
+To install all the prerequisites needed, use
+
+```
+bash get-prequisites.sh
+```
+This took me around 10-15 minutes, so you can sit back and relax for a bit! Once finished running, the following message should be printed
+
+```
+Prequisites Downloaded Successfully
+```
+
+You can test your installation by entering
+
+```
+python
+Python 3.7.3 (default, Jul 25 2020, 13:03:44)
+[GCC 8.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import tensorflow as tf
+>>> print (tf.__version__)
+```
+
+If everything was installed properly, you should get ```2.2.0```. This means we can now setup the Object Detection API with
+
+```
+bash install-object-detection-api.sh
+```
+
