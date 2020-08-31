@@ -100,7 +100,7 @@ To install all the prerequisites needed, use
 ```
 bash get-prequisites.sh
 ```
-This took me around 10-15 minutes, so you can sit back and relax for a bit! Once finished running, the following message should be printed
+This took me around 5-10 minutes, so you can sit back and relax for a bit! Once finished running, the following message should be printed
 
 ```
 Prequisites Downloaded Successfully
@@ -120,6 +120,6 @@ Type "help", "copyright", "credits" or "license" for more information.
 If everything was installed properly, you should get ```2.2.0```. This means we can now setup the Object Detection API with
 
 ```
-bash install-object-detection-api.sh
+source ./install-object-detection-api.sh
 ```
 
