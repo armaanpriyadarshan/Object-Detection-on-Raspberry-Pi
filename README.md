@@ -123,3 +123,21 @@ If everything was installed properly, you should get ```2.2.0```. This means we 
 source ./install-object-detection-api.sh
 ```
 
+You should a similar success message looking like this
+
+```
+TensorFlow Object Detection API Setup Successfully!
+```
+
+To test out this installation, another similar step looking like this
+
+```
+python
+Python 3.7.3 (default, Jul 25 2020, 13:03:44)
+[GCC 8.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import object_detection
+```
+
+If everything went according to plan, the object_detection module should import without any errors.
+**
