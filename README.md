@@ -174,6 +174,14 @@ wget http://download.tensorflow.org/models/object_detection/tf2/20200711/ssd_mob
 ```
 If you plan to use a different model, right-click the name of the model and copy the download link. Then use that after wget instead of the link I provided. We can then extract the contents of the tar.gz file with
 
-```tar -xvf ssd_mobilenet_v2_320x320_coco17_tpu-8.tar.gz```
+```
+tar -xvf ssd_mobilenet_v2_320x320_coco17_tpu-8.tar.gz
+```
 
 This name is a bit long and confusing to work with so let's rename it with
+
+```
+mv ssd_mobilenet_v2_320x320_coco17_tpu-8 my_mobilenet_model
+```
+
+Once done so, our model should be ready for testing!
