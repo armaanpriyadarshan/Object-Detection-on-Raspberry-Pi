@@ -185,3 +185,8 @@ mv ssd_mobilenet_v2_320x320_coco17_tpu-8 my_mobilenet_model
 ```
 
 Once done so, our model should be ready for testing!
+
+### Option 2: Using a TensorFlow Custom Object Detector
+If you wanted to detect an object that's not in the COCO Dataset, this is the option for you! Recently, I made a video with more details on training a Custom Object Detector with TensorFlow 2. 
+
+[![Link to my vid](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/doc/Thumbnail2.png)](https://www.youtube.com/watch?v=oqd54apcgGE)
