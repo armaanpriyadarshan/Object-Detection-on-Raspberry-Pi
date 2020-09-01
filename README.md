@@ -86,7 +86,7 @@ source bin/activate
 
 When you issue ```ls```, your ```tensorflow``` directory should now look something like this
 
-<p align="center">
+<p align="left">
   <img src="doc/directory.png">
 </p>
 
