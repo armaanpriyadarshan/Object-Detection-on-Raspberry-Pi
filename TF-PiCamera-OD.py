@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 """
-Object Detection (On Video) From TF2 Saved Model
+Object Detection (On Pi Camera) From TF2 Saved Model
 =====================================
 """
 
