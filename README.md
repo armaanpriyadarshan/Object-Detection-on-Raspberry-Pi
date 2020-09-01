@@ -1,5 +1,5 @@
 # Object-Detection-on-Raspberry-Pi
-
+[![TensorFlow 2.2](https://img.shields.io/badge/TensorFlow-2.2-FF6F00?logo=tensorflow)](https://github.com/tensorflow/tensorflow/releases/tag/v2.2.0)
 ### This Tutorial Covers How to deploy the New TensorFlow 2 Object Detection Models and Custom Object Detection Models on the Raspberry Pi
 <p align="center">
   <img src="doc/Thumbnail.png">
@@ -17,7 +17,8 @@ Continuing with my tutorial on the TensorFlow 2 Object Detection API, what bette
 1. [Setting up the Raspberry Pi and Getting Updates](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/README.md#step-1-setting-up-the-raspberry-pi-and-getting-updates)
 2. [Organizing our Workspace and Virtual Environment](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi#step-2-organizing-our-workspace-and-virtual-environment)
 3. [Installing TensorFlow, OpenCV, and other Prerequisites](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/README.md#step-3-installing-tensorflow-opencv-and-other-prerequisites)
-4. [Testing out our Model ]()
+4. [Preparing our Object Detection Model]()
+5. [Running Object Detection on Image, Video, or Pi Camera]()
 
 ## Step 1: Setting up the Raspberry Pi and Getting Updates
 Before we can get started, we must have access to the Raspberry Pi's Desktop Interface. This can be done with VNC Viewer or the standard Monitor and HDMI. I made a more detailed video which can be found below
@@ -142,3 +143,25 @@ Type "help", "copyright", "credits" or "license" for more information.
 If everything went according to plan, the object_detection module should import without any errors.
 
 **Note: Similar to the Virtual Environment, everytime you start a new terminal, the $PYTHONPATH variable set by the shell script will no longer be active. This means you will not be able to import the object_detection module. You can reactivate it manually with ```export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow/models/research:/home/pi/tensorflow/models/research/slim``` everytime you open a new terminal or issue echo ```"export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow/models/research:/home/pi/tensorflow/models/research/slim" >> ~/.bashrc```. This sets the system variable upon opening a new terminal.**
+
+## Step 4: Preparing our Object Detection Model
+
+For this step, there are two options. You can use one of the TensorFlow Pre-Trained Object Detection Models which can be found in the [TensorFlow 2 Model Zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md). Or you can train your own Custom Object Detector with the TensorFlow 2 Custom Object Detection API. Later on, I will cover both of these options a bit more extensively. First let's create a directory to store our models. Since we already have a folder named ```models```, let's call it ```od-models```.
+
+```
+mkdir od-models
+```
+
+Then let's cd into it with
+
+```
+cd od-models
+```
+
+Now, let's cover both options with more detail.
+
+### Option 1: Using a TensorFlow 2 Pre-Trained Model
+For this guide, I will be using this option. TensorFlow's pre-trained models are trained on the [MSCOCO Dataset](https://cocodataset.org/#home) containing a variety of common, everyday, objects. TensorFlow 2's new ```saved_model``` format consists of a ```saved_model.pb``` and a ```variables``` directory. These two hold weights and the actual inference graph for object detection. The TensorFlow 2 Model Zoo can be found [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md).
+<p align="left">
+  <img src="doc/modelzoo.png">
+</p>
