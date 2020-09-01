@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Continuing with my tutorial on the TensorFlow 2 Object Detection API, what better way to deploy an Object Detection Model than on the Raspberry Pi? This guide will contain step-by-step instructions to do exactly so. To make everything as easy as possible for you guys, I have simplified all the commands into a few shellscripts compressing tons of commands into only a few! I've also provided three object detection scripts for images, video, and real-time object detection with the Pi Camera! Many thanks to my friend Gareth who helped me out with testing and refining my instructions!
+Continuing with my tutorial on the TensorFlow 2 Object Detection API, what better way to deploy an Object Detection Model than on the Raspberry Pi? This guide will contain step-by-step instructions to do exactly so. To make everything as easy as possible for you guys, I have simplified all the commands into a few shellscripts compressing tons of commands into only a few! I've also provided three object detection scripts for images, video, and real-time object detection with the Pi Camera! Many thanks to my friend Gareth  who helped me out with testing and refining my instructions!
 
 **I will soon make a YouTube Tutorial which will be posted [here](), and an extremely import step [here](https://www.youtube.com/channel/UCT9t2Bug62RDUfSBcPt0Bzg?sub_confirmation=1)!**
 
@@ -190,3 +190,5 @@ Once done so, our model should be ready for testing!
 If you wanted to detect an object that's not in the COCO Dataset, this is the option for you! Recently, I made a video with more details on training a Custom Object Detector with TensorFlow 2. 
 
 [![Link to my vid](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/doc/Thumbnail2.png)](https://www.youtube.com/watch?v=oqd54apcgGE)
+
+After you've followed all the steps mentioned in the video, you should end up with a ```labelmap.pbtxt``` file and a ```saved_model``` folder. You'll need to transfer these two files to our ```od-models``` directory on the Raspberry Pi. I usually use an SFTP Client such as [WinSCP](https://winscp.net/eng/index.php) to transfer files, but you can use whatever you want. Once your ```od-models``` directory contains your ```labelmap.pbtxt``` and ```saved_model```, you are ready to test!
