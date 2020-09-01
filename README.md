@@ -17,7 +17,7 @@ Continuing with my tutorial on the TensorFlow 2 Object Detection API, what bette
 1. [Setting up the Raspberry Pi and Getting Updates](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/README.md#step-1-setting-up-the-raspberry-pi-and-getting-updates)
 2. [Organizing our Workspace and Virtual Environment](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi#step-2-organizing-our-workspace-and-virtual-environment)
 3. [Installing TensorFlow, OpenCV, and other Prerequisites](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/README.md#step-3-installing-tensorflow-opencv-and-other-prerequisites)
-4. [Preparing our Object Detection Model]()
+4. [Preparing our Object Detection Model](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/README.md#step-4-preparing-our-object-detection-model)
 5. [Running Object Detection on Image, Video, or Pi Camera]()
 
 ## Step 1: Setting up the Raspberry Pi and Getting Updates
