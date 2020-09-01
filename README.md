@@ -192,3 +192,5 @@ If you wanted to detect an object that's not in the COCO Dataset, this is the op
 [![Link to my vid](https://github.com/armaanpriyadarshan/Object-Detection-on-Raspberry-Pi/blob/master/doc/Thumbnail2.png)](https://www.youtube.com/watch?v=oqd54apcgGE)
 
 After you've followed all the steps mentioned in the video, you should end up with a ```labelmap.pbtxt``` file and a ```saved_model``` folder. You'll need to transfer these two files to our ```od-models``` directory on the Raspberry Pi. I usually use an SFTP Client such as [WinSCP](https://winscp.net/eng/index.php) to transfer files, but you can use whatever you want. Once your ```od-models``` directory contains your ```labelmap.pbtxt``` and ```saved_model```, you are ready to test!
+
+## Step 5: Running Object Detection on Image, Video, or Pi Camera
