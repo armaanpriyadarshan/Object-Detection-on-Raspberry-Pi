@@ -106,7 +106,7 @@ import warnings
 warnings.filterwarnings('ignore')   # Suppress Matplotlib warnings
 
 print('Running inference for PiCamera')
-videostream = VideoStream(resolution=(640,640),framerate=30).start()
+videostream = VideoStream(resolution=(640,480),framerate=30).start()
 while True:
 
     # Acquire frame and expand frame dimensions to have shape: [1, None, None, 3]
