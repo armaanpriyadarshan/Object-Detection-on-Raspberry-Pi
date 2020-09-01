@@ -229,3 +229,9 @@ TF-PiCamera-OD.py --model od-models --labels od-models/labelmap.pbtxt
 ```
 
 It takes about 3 minutes for the model to load, but a window with results should open up. Your ouputs should look something like this
+
+<p align="left">
+  <img src="doc/demo.png"
+</p>
+  
+Congratulations! This means we're successfully performing real-time object detection on the Raspberry Pi! Now that you've tried out the Pi Camera, why not one of the other scripts? Over the next weeks I'll continue to add on to this repo and tinker with the programs to make them better than ever! If you find something cool, feel free to share it, as others can also learn! And if you have any errors, just raise an issue and I'll be happy to take a look at it. Great work, and until next time, bye!
