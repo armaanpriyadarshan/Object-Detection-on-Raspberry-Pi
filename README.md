@@ -222,4 +222,10 @@ optional arguments:
                         objects
 ```
 
-If you were wondering about the arguments taken by the other programs, just use -h or --help after the command. 
+If you were wondering about the arguments taken by the other programs, just use -h or --help after the command. An example command would look like
+
+```
+TF-PiCamera-OD.py --model od-models --labels od-models/labelmap.pbtxt
+```
+
+It takes about 3 minutes for the model to load, but a window with results should open up. Your ouputs should look something like this
