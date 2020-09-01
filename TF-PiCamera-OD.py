@@ -57,7 +57,7 @@ class VideoStream:
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--model', help='Folder that the Saved Model is Located In',
-                    default='od-models/ssd_mobilenet_v2_320x320_coco17_tpu-8')
+                    default='od-models/my_mobilenet_model')
 parser.add_argument('--labels', help='Where the Labelmap is Located',
                     default='models/research/object_detection/data/mscoco_label_map.pbtxt')
 parser.add_argument('--threshold', help='Minimum confidence threshold for displaying detected objects',
