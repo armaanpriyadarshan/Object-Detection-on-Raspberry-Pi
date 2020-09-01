@@ -142,7 +142,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 If everything went according to plan, the object_detection module should import without any errors.
 
-**Note: Similar to the Virtual Environment, everytime you start a new terminal, the $PYTHONPATH variable set by the shell script will no longer be active. This means you will not be able to import the object_detection module. You can reactivate it manually with ```export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow/models/research:/home/pi/tensorflow/models/research/slim``` everytime you open a new terminal or issue echo ```"export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow/models/research:/home/pi/tensorflow/models/research/slim" >> ~/.bashrc```. This sets the system variable upon opening a new terminal.**
+**Note: Similar to the Virtual Environment, everytime you start a new terminal, the $PYTHONPATH variable set by the shell script will no longer be active. This means you will not be able to import the object_detection module. You can reactivate it manually with ```export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow/models/research:/home/pi/tensorflow/models/research/slim``` everytime you open a new terminal or issue ```echo "export PYTHONPATH=$PYTHONPATH:/home/pi/tensorflow/models/research:/home/pi/tensorflow/models/research/slim" >> ~/.bashrc```. This sets the system variable upon opening a new terminal.**
 
 ## Step 4: Preparing our Object Detection Model
 
@@ -194,3 +194,32 @@ If you wanted to detect an object that's not in the COCO Dataset, this is the op
 After you've followed all the steps mentioned in the video, you should end up with a ```labelmap.pbtxt``` file and a ```saved_model``` folder. You'll need to transfer these two files to our ```od-models``` directory on the Raspberry Pi. I usually use an SFTP Client such as [WinSCP](https://winscp.net/eng/index.php) to transfer files, but you can use whatever you want. Once your ```od-models``` directory contains your ```labelmap.pbtxt``` and ```saved_model```, you are ready to test!
 
 ## Step 5: Running Object Detection on Image, Video, or Pi Camera
+
+Once your model is ready, cd into the ```tensorflow``` directory with
+
+```
+cd ~/tensorflow
+```
+
+If you used a pre-trained model, the default programs should work. Let's run the Pi Camera Script with
+
+```
+python TF-PiCamera-OD.py
+```
+
+If you are using a Custom Object Detection Model, the usage for the Pi Camera Script looks like
+
+```
+usage: TF-PiCamera-OD.py [-h] [--model MODEL] [--labels LABELS]
+                         [--threshold THRESHOLD]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --model MODEL         Folder that the Saved Model is Located In
+  --labels LABELS       Where the Labelmap is Located
+  --threshold THRESHOLD
+                        Minimum confidence threshold for displaying detected
+                        objects
+```
+
+If you were wondering about the arguments taken by the other programs, just use -h or --help after the command. 
