@@ -161,7 +161,19 @@ cd od-models
 Now, let's cover both options with more detail.
 
 ### Option 1: Using a TensorFlow 2 Pre-Trained Model
-For this guide, I will be using this option. TensorFlow's pre-trained models are trained on the [MSCOCO Dataset](https://cocodataset.org/#home) containing a variety of common, everyday, objects. TensorFlow 2's new ```saved_model``` format consists of a ```saved_model.pb``` and a ```variables``` directory. These two hold weights and the actual inference graph for object detection. The TensorFlow 2 Model Zoo can be found [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md).
+For this guide, I will be using this option. TensorFlow's pre-trained models are trained on the [2017 COCO Dataset](https://cocodataset.org/#home) containing a variety of common, everyday, objects. TensorFlow 2's new ```saved_model``` format consists of a ```saved_model.pb``` and a ```variables``` directory. These two hold weights and the actual inference graph for object detection. The TensorFlow 2 Model Zoo can be found [here](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md).
+
 <p align="left">
   <img src="doc/modelzoo.png">
 </p>
+
+As you can see, there's tons of models to choose from! However, you probably noticed that I circled Speed in red. Since we are running on a Raspberry Pi, we're going to have to use one of the faster models. I'd recommend sticking to models with speeds under 40 ms. For this guide, I'll be using the SSD MobileNet v2 320x320 model. This is the fastest model, but there will be a small drop in accuracy. Let's download the model to our Raspberry Pi with
+
+```
+wget http://download.tensorflow.org/models/object_detection/tf2/20200711/ssd_mobilenet_v2_320x320_coco17_tpu-8.tar.gz
+```
+If you plan to use a different model, right-click the name of the model and copy the download link. Then use that after wget instead of the link I provided. We can then extract the contents of the tar.gz file with
+
+```tar -xvf ssd_mobilenet_v2_320x320_coco17_tpu-8.tar.gz```
+
+This name is a bit long and confusing to work with so let's rename it with
