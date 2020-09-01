@@ -16,7 +16,7 @@ tf.get_logger().setLevel('ERROR')           # Suppress TensorFlow logging (2)
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--model', help='Folder that the Saved Model is Located In',
-                    default='exported-models/my_mobilenet_model')
+                    default='od-models/my_mobilenet_model')
 parser.add_argument('--labels', help='Where the Labelmap is Located',
                     default='models/research/object_detection/data/mscoco_label_map.pbtxt')
 parser.add_argument('--video', help='Name of the video to perform detection on. To run detection on multiple images, use --imagedir',
