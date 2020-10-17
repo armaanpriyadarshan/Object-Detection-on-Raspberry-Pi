@@ -99,12 +99,12 @@ To make this step as user-friendly as possible, I condensed the installation pro
 To install all the prerequisites needed, use
 
 ```
-bash get-prequisites.sh
+bash get-prerequisites.sh
 ```
 This took me around 5-10 minutes, so you can sit back and relax for a bit! Once finished running, the following message should be printed
 
 ```
-Prequisites Downloaded Successfully
+Prerequisites Downloaded Successfully
 ```
 
 You can test your installation by entering
