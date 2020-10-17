@@ -33,4 +33,4 @@ sudo apt-get install protobuf-compiler
 
 # Print Success Message
 
-echo Prequisites Downloaded Successfully
+echo Prerequisites Downloaded Successfully
